@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_user
 
+#returns name of current user
+# returns nil if nobody is logged in 
 def current_user
   session[:name]
 end
