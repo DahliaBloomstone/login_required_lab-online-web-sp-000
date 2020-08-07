@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
   def new
   end
 
+#login action
   def create
     if params[:name].present?
       session[:name] = params[:name]
@@ -11,6 +12,7 @@ class SessionsController < ApplicationController
     end
   end
 
+#logout action 
   def destroy
     if session[:name].present?
       session.delete :name
